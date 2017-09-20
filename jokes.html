@@ -7,6 +7,53 @@
 <link href='https://fonts.googleapis.com/css?family=Coming Soon' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+/* The actual popup */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: #4d7358;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #4d7358 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
 * {
     box-sizing: border-box;
 }
@@ -42,7 +89,6 @@ body {
 .content {
     background-color: #e39e54;
     padding: 10px;
-    height: 600px; /* Should be removed. Only for demonstration */
     /* Animate Backgound */
     /*-webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
     /*animation: mymove 5s infinite; */
@@ -63,7 +109,7 @@ body {
 /* Style the footer */
 .footer {
     background-color: #e8d174;
-    padding: 10px;
+    padding: 5px;
 }
 </style>
 </head>
@@ -75,11 +121,52 @@ body {
   <a href="#">CS 260</a>
 </div>
 
+<!--Main Contents-->
 <div class="content">
 <center>
   <h2>Puntentional Jokes</h2>
-  <p>A Computer Science Project by Erik Heras and Hannah Larson</p> </center>
+  <p>A Computer Science Project by Erik Heras and Hannah Larson</p>
+  <p>>< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< >< ><</p>
+  </center>
+  
+  <div class="tooltip">* What did the magician do when he turned off the road?
+  <span class="tooltiptext">He turned into a driveway!</span>
 </div>
+
+<p><div class="tooltip">* What's another term for a horse doctor?
+  <span class="tooltiptext">An Amish mechanic!</span>
+</div></p>
+
+<div class="tooltip">* How many South Americans does it take to change a light bulb?
+  <span class="tooltiptext">A Brazilian!</span>
+</div>
+
+<p><div class="tooltip">* Why is it warmer in the corner?
+  <span class="tooltiptext">Because it's 90°!</span>
+</div></p>
+
+<div class="tooltip">* Why did the old man fall down the well?
+  <span class="tooltiptext">Because he couldn't see that well!</span>
+</div>
+
+<p><div class="tooltip">* Why were the middle ages called the dark ages?
+  <span class="tooltiptext">Because there were too many knights!</span>
+</div></p>
+
+  <p><div class="tooltip">* What is the difference between a nicely dressed man on a tricycle and a poorly dressed man on a bicycle?
+
+  <span class="tooltiptext">A tire!</span>
+</div> </p>
+
+<!--Pictures-->
+<center>
+<img src="Landscape.jpg" alt="Landscape Pun" style="width:304px;height:228px;">
+<img src="dog.jpg" alt="Dog Pun" style="width:304px;height:408px;">
+<img src="Boeing.png" alt="Boeing Pun" style="width:304px;height:228px;">
+</center>
+
+</div>
+ 
 
 <div class="footer">
 <center>
@@ -87,11 +174,9 @@ body {
   <p>Find us here on social media!</p>
   <!-- Erik's Links -->
   <p> EH-> 
-  <a href="https://www.facebook.com/" style="text-decoration:none;color:black">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <a href="https://www.linkedin.com/in/hannahclarson/" style="text-decoration:none;color:black">
+  <a href="https://www.linkedin.com/in/erik-felipe-heras/" style="text-decoration:none;color:black">
   <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <a href="https://github.com/larsonhannah/" style="text-decoration:none;color:black">
+  <a href="https://github.com/efheras" style="text-decoration:none;color:black">
   <i class="fa fa-git-square w3-hover-opacity"></i> </p>
   <!-- Hannah's Links -->
   HL->
@@ -101,11 +186,11 @@ body {
   <i class="fa fa-linkedin w3-hover-opacity"></i>
   <a href="https://github.com/larsonhannah/" style="text-decoration:none;color:black">
   <i class="fa fa-git-square w3-hover-opacity"></i>
-  
-</div>
 </center>
+</div>
 </div>
 
 </body>
 </html>
+
 
